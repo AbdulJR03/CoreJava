@@ -2,21 +2,20 @@ package BasicPrograms;
 
 public class RomanToInt1 {
 
-    int value(char r)
-    {
-        if(r == 'I')
+    int value(char r) {
+        if (r == 'I')
             return 1;
-        if(r == 'V')
+        if (r == 'V')
             return 5;
-        if(r == 'X')
+        if (r == 'X')
             return 10;
-        if(r == 'L')
+        if (r == 'L')
             return 50;
-        if(r == 'C')
+        if (r == 'C')
             return 100;
-        if(r == 'D')
+        if (r == 'D')
             return 500;
-        if(r == 'M')
+        if (r == 'M')
             return 1000;
         return -1;
 
@@ -24,36 +23,39 @@ public class RomanToInt1 {
 
     //funtion to convert roman to intiger
 
-    int convertRomanToIntiger(String s){
-        int total =0;
+    int ConvertRomanToInt(String s) {
+        int total = 0;
+        for (int i = 0; i < s.length(); i++) {
 
-        for(int i=0; i<s.length(); i++){
-            int s1= value(s.charAt(i));
+            int s1 = value(s.charAt(i));
 
-            if (i+1 <s.length()){
-                int s2= value(s.charAt(i+1));
-
-                if(s1>=s2){
-                    total = total+s1;
+            if (i + 1 < s.length()) {
+              int  s2 = value(s.charAt(i + 1));
+                if (s1 > s2) {
+                    total = total + s1;
+                } else {
+                    total = total - s1;
                 }
-                else {
-                    total= total-s1;
-                }}
-
-                else {
-                    total=total+s1;
-                }
+            } else {
+                total = total + s1;
             }
-        return total;
-
         }
 
+    return total;
+
+    }
+
     public static void main(String[] args) {
-        RomanToInt1 ob= new RomanToInt1();
-        String romanStr= "DCV";
-        System.out.println("The integer value is  "+ ob.convertRomanToIntiger(romanStr));
+        RomanToInt1 ob = new RomanToInt1();
+        String string = "LXVMC";
+        System.out.println("Intiger number is  "+ ob.ConvertRomanToInt(string));
     }
-    }
+
+}
+
+
+
+
 
 
 
