@@ -12,6 +12,14 @@ public class ReverseString {
             revstr = ch + revstr ;
         }
         System.out.println(revstr);
+//
+//        if(string.equalsIgnoreCase(revstr)){
+//
+//            System.out.println("String is palindrome");
+//        }
+//        else {
+//            System.out.println("String is not palindrome");
+//        }
     }
 
 }
