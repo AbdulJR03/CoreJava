@@ -14,8 +14,7 @@ public class MaxOf3Numbers {
         int b = sc.nextInt();
         int c = sc.nextInt();
 
-
-        int MaxOf3Number = (a > b) ? (a > b ? a : b) : (a > c ? a : c);
+        int MaxOf3Number = (a > b) ? (a > c ? a : c) : (b > c ? b : c);
 
         System.out.println("LargestNumber is" + MaxOf3Number);
     }
